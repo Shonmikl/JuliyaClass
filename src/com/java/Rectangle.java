@@ -23,7 +23,7 @@ public class Rectangle {
     }
 
     // конструктор принимает длину и ширину
-    public Rectangle(int length, int high) {
+    Rectangle(int length, int high) {
         this.length = length;
         this.high = high;
     // перемещение левого верхнего угла в [0, 0]
@@ -32,7 +32,7 @@ public class Rectangle {
     }
 
     // конструктор со всеми координатами
-    public Rectangle(int leftTopX1, int leftTopY1, int rightBottomX2, int rightBottomY2) {
+    Rectangle(int leftTopX1, int leftTopY1, int rightBottomX2, int rightBottomY2) {
         this.leftTopX1 = leftTopX1;
         this.leftTopY1 = leftTopY1;
         this.rightBottomX2 = rightBottomX2;
@@ -40,7 +40,7 @@ public class Rectangle {
     }
 
     // вывод всех координат
-    public void rectPrint() {
+    void rectPrint() {
         System.out.println(
                 "[X1 : " + leftTopX1 + "]" + "\n"+
                 "[X2 : " + rightBottomX2  + "]" + "\n"+
@@ -50,32 +50,37 @@ public class Rectangle {
     }
 
     // двигаем фигуру по оси "Х"
-    public void move(int dx, int dy) {
+    void move() {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please type 'dx':");
-        dx = scanner.nextInt();
+        int dx = scanner.nextInt();
         leftTopX1 += dx;
-        rightBottomX2 +=dx;
+        rightBottomX2 += dx;
 
-        System.out.println("Please type 'dy':");
-        dy = scanner.nextInt();
+        System.out.println("Please type 'move':");
+        int dy = scanner.nextInt();
         leftTopY1 +=dy;
         rightBottomY2 +=dy;
     }
 
-
+    // считаем длину
     public int calcLength() {
-        return 0;
+        return rightBottomX2 - leftTopX1;
     }
 
+    // считаем высоту
     public int calcHigh() {
         return 0;
     }
 
+    // считаем периметр
     public int calcPer() {
         return 0;
     }
 
+
+    // считаем площадь
     public int square() {
         return 0;
     }
