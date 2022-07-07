@@ -11,5 +11,6 @@ public class Task1Main {
                 (Arrays.toString
                         (task1.getMinAndMax
                                 (result)));
+
     }
 }

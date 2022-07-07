@@ -23,15 +23,15 @@ public class Task1 {
                 } catch (InputMismatchException e) {
                     System.out.println("You have to put only digit" +
                             " in range from 0 to " + RANGE_B + "!!!");
-                    break;
                 }
+                break;
+            }
 
-                if (0 < rangeA && rangeA < RANGE_B) {
-                    ARRAY[count] = rangeA;
-                    count++;
-                } else {
-                    System.out.println("You have to use only this range!");
-                }
+            if (0 < rangeA && rangeA < RANGE_B) {
+                ARRAY[count] = rangeA;
+                count++;
+            } else {
+                System.out.println("You have to use only this range!");
             }
         }
 
